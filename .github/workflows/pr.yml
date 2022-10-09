@@ -21,6 +21,9 @@ jobs:
           cache: "yarn"
           node-version-file: ".nvmrc"
 
+      - name: Configure access to private npm packages
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Install dependencies
         run: |
           yarn install --frozen-lockfile

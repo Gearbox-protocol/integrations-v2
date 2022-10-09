@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/Gearbox-protocol/integrations-v2"
   },
-  "private": true,
   "files": [
     "contracts"
   ],
