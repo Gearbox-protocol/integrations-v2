@@ -38,4 +38,6 @@ jobs:
 
       - name: Perform checks
         run: |
+          yarn typecheck:ci
+          yarn lint:ci
           yarn prettier:ci
