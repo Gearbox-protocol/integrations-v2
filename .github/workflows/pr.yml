@@ -30,17 +30,12 @@ jobs:
         with:
           version: nightly
 
-      - name: Run forge tests
+      - name: Run forge unit tests
         run: forge test
 
-      - name: Run forge mainnet tests
-        run: forge t  --match-contract Mainnet_ --fork-url ${{ secrets.ETH_MAINNET_PROVIDER }}
+      - name: Run forge integrations tests
+        run: forge t --match-test _live_ --fork-url ${{ secrets.ETH_GOERLI_PROVIDER }}
 
       - name: Perform checks
         run: |
-          yarn build
           yarn prettier:ci
-          yarn lint:ci
-          yarn typecheck:ci
-        env:
-          NODE_OPTIONS: "--max-old-space-size=8192"
