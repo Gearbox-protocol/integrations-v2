@@ -62,7 +62,6 @@ contract WrappedAToken is ERC20, IWrappedAToken {
 
     /// @notice Returns amount of aTokens per waToken, scaled by 1e18
     function exchangeRate() public view override returns (uint256) {
-        if (totalSupply() == 0) return WAD;
         return WAD * lendingPool.getReserveNormalizedIncome(address(underlying)) / _normalizedIncome;
     }
 
