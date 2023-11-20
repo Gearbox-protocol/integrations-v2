@@ -17,7 +17,7 @@ import {ZeroAddressException} from "@gearbox-protocol/core-v2/contracts/interfac
 import "../../lib/constants.sol";
 import {Tokens, TokensTestSuite} from "../../suites/TokensTestSuite.sol";
 
-import {PERCENTAGE_FACTOR} from "@gearbox-protocol/core-v2/contracts/libraries/PercentageMath.sol";
+import {PERCENTAGE_FACTOR} from "@gearbox-protocol/core-v2/contracts/libraries/Constants.sol";
 
 import {WstETHPoolSetup} from "../../suites/WstETHPoolSetup.sol";
 
